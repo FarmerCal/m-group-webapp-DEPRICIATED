@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   AppBar,
   Button,
+  SvgIcon,
   Tab,
   Tabs,
   Toolbar,
@@ -12,7 +13,7 @@ import {
 import AddBusinessRoundedIcon from "@mui/icons-material/AddBusinessRounded";
 import DrawerComp from "./Drawer";
 
-
+import Logo from "../assets/logo";
 
 const Header = () => {
   const [value, setValue] = useState();
@@ -23,9 +24,9 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <AppBar sx={{ background: "#063970" }}>
+      <AppBar sx={{ background: "#000000" }}>
         <Toolbar>
-          <AddBusinessRoundedIcon sx={{ transform: "scale(2)" }} />
+          <Logo />
           {isMatch ? (
             <>
               <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
@@ -46,10 +47,12 @@ const Header = () => {
                 <Tab label="Tools" />
                 <Tab label="Other" />
               </Tabs>
-              <Button sx={{ marginLeft: "auto" }} variant="contained">
+              <Button
+                variant="outlined" href="https://maruslearn.com" target="_blank"
+                sx={{ marginLeft: "auto", color: "#ffffff", borderColor: "#ffffff" }}>
                 Learn
               </Button>
-              <Button sx={{ marginLeft: "10px" }} variant="contained">
+              <Button sx={{ marginLeft: "10px", color: "#ffffff", borderColor: "#ffffff" }} variant="outlined" href="https://marusbuild.com" target="_blank">
                 Build
               </Button>
             </>
